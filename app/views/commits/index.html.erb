@@ -7,17 +7,19 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<table class="table">
-  <thead>
-    <th>SHA</th>
-    <th>MESSAGE</th>
-    <th>LINK</th>
-  </thead>
-  <% @commits.each do |commit| %>
+<div class="container">
+  <table class="table">
+    <thead>
+      <th>SHA</th>
+      <th>MESSAGE</th>
+      <th>LINK</th>
+    </thead>
+    <% @commits.each do |commit| %>
     <tr>
       <td><%= commit.sha%></td>
       <td><%= commit.message%></td>
       <td><%= link_to "link", commit.url %></td>
     </tr>
-  <% end %>
-</table>
+    <% end %>
+  </table>
+</div>

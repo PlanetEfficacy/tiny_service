@@ -10,7 +10,7 @@ class CommitsController < ApplicationController
       Commit.find_or_create_by(message: raw_commit[:message],
                                author_name: raw_commit[:author][:names],
                                url: raw_commit[:url],
-                               sha: raw_commit[:sha])
+                               sha: raw_commit[:id][0..6])
     end
     # Callback.create(json: )
   end
