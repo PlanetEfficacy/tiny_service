@@ -1,5 +1,11 @@
 class CallbackController < ApplicationController
-  def create
-    render json: params
+  def index
+    @callback = Callback.all
   end
+
+  def create
+    Callback.create(request.raw_post)
+  end
+
+  # private
 end
