@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <th>SHA</th>
+    <th>MESSAGE</th>
+    <th>LINK</th>
+  </thead>
+  <% @commits.each do |commit| %>
+    <tr>
+      <td>Your sha here!</td>
+      <td><%= commit.message%></td>
+      <td><%= link_to "link", commit.url %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  post '/callback', to: "callback#create", as: 'callback'
-  get '/callbacks', to: "callback#index"
+  post '/callback', to: "commits#create", as: 'callback'
+  resources :commits, only: [:index]
 end
