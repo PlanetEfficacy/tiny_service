@@ -1,7 +1,7 @@
 class CommitsController < ApplicationController
 
   def index
-    @commits = Commit.all
+    @commits = Commit.last_ten
   end
 
   def create

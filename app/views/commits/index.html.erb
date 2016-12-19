@@ -16,9 +16,9 @@
       <th>Time since last commit</th>
     </thead>
     <tr>
-      <td><%= @commits.count %></td>
-      <td><%= @commits.last.author_name %></td>
-      <td><%= time_ago_in_words(@commits.last.timestamp) %></td>
+      <td><%= Commit.count %></td>
+      <td><%= @commits.first.author_name %></td>
+      <td><%= time_ago_in_words(@commits.first.timestamp) %></td>
     </tr>
   </table>
 </div>
