@@ -5,7 +5,9 @@ class CallbackController < ApplicationController
   end
 
   def create
-    Callback.create(json: request.raw_post)
+    byebug
+    JSON.parse(request.raw_post)
+    # Callback.create(json: )
   end
 
   # private
