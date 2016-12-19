@@ -10,6 +10,21 @@
 <div class="container">
   <table class="table">
     <thead>
+      <th>Number of commits</th>
+      <th>Most recent commiter</th>
+      <th>Time since last commit</th>
+    </thead>
+    <tr>
+      <td><%=@commits.count%></td>
+      <td><%=@commits.last.author_name%></td>
+      <td><%= time_ago_in_words(@commits.last.timestamp) %></td>
+    </tr>
+  </table>
+</div>
+
+<div class="container">
+  <table class="table">
+    <thead>
       <th>SHA</th>
       <th>MESSAGE</th>
       <th>LINK</th>
